@@ -1,9 +1,13 @@
+import java.util.Collection;
+
 public class Basket {
     public static int currentOrderNumber = 0;
 
     private int orderNumber;
 
     private double sum;
+
+    private Collection<Position> positions;
 
     Basket(int orderNumber) {
         this.orderNumber = orderNumber;
@@ -31,6 +35,11 @@ public class Basket {
     }
 
 
+    public Collection<Position> getPositions() {
+        return positions;
+    }
 
-
+    public void setPositions(Collection<Position> positions) {
+        this.positions = positions;
+    }
 }

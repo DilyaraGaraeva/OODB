@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shop>
+    <clients>
+        <client>
+            <accounts>
+                <account>
+                    <accountNumber>1299876</accountNumber>
+                    <balance>0.0</balance>
+                </account>
+            </accounts>
+        </client>
+        <client/>
+    </clients>
+</shop>

@@ -1,3 +1,5 @@
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 public class Buyer extends User {
@@ -9,6 +11,31 @@ public class Buyer extends User {
         super(firstName, lastName, phoneNumber, email);
         this.address = address;
     }
+
+    public Buyer(String name, String lastName, String phoneNumber, String email) {
+
+    }
+
+
+    private List<ShopAccount>accounts;
+
+
+    @XmlElementWrapper(name = "accounts")
+    @XmlElement(name = "account")
+    public List<ShopAccount> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<ShopAccount> accounts) {
+        this.accounts = accounts;
+    }
+    @Override
+    public String toString() {
+        return "Buyer: " + getLastName() +
+                ", accounts=" + accounts +
+                '\n';
+    }
+
 
 
     public int sentToBasket(double price){

@@ -1,4 +1,4 @@
-abstract class User {
+class User {
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -11,6 +11,19 @@ abstract class User {
         this.phoneNumber = phoneNumber;
         this.email = email;
 //        this.address = address;
+    }
+
+    User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 
     public String getFirstName() {
@@ -44,4 +57,5 @@ abstract class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
